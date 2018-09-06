@@ -30,31 +30,65 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/dashboard',
     name: 'Dashboard',
-    hidden: true,
     children: [{
       path: 'dashboard',
-      component: () => import('@/views/dashboard/index')
+      component: () => import('@/views/dashboard/index'),
+      meta: { title: 'Dashboard', icon: 'dashboard' }
     }]
   },
 
   {
-    path: '/example',
+    path: '/stock',
     component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
+    redirect: '/stock/scount',
+    name: 'Stock',
+    meta: { title: 'Stock', icon: 'stock' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'scount',
+        name: 'Stock Count',
+        component: () => import('@/views/form/index'),
+        meta: { title: 'Stock Count', icon: 's-count' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        path: 'sin',
+        name: 'Stock In',
+        component: () => import('@/views/table/index'),
+        meta: { title: 'Stock In', icon: 's-in' }
+      },
+      {
+        path: 'p-margin',
+        name: 'Profit Margin',
+        component: () => import('@/views/nested/menu2/index'),
+        meta: { title: 'Profit Margin', icon: 'profit' }
+      }
+      // {
+      //   path: 'tree',
+      //   name: 'Tree',
+      //   component: () => import('@/views/tree/index'),
+      //   meta: { title: 'Tree', icon: 'tree' }
+      // }
+    ]
+  },
+
+  {
+    path: '/sales',
+    component: Layout,
+    redirect: '/sales/scount',
+    name: 'Sales',
+    meta: { title: 'Sales', icon: 'stock' },
+    children: [
+      {
+        path: 'scount',
+        name: 'Stock Count',
+        component: () => import('@/views/form/index'),
+        meta: { title: 'Stock Count', icon: 's-count' }
+      },
+      {
+        path: 'sin',
+        name: 'Stock In',
+        component: () => import('@/views/table/index'),
+        meta: { title: 'Stock In', icon: 's-in' }
       }
     ]
   },
