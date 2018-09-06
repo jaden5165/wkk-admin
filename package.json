@@ -10,10 +10,8 @@
     "build": "node build/build.js",
     "build:report": "npm_config_report=true npm run build",
     "lint": "eslint --ext .js,.vue src",
-    "test": "npm run lint",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages -p"
+    "test": "npm run lint"
   },
-  "homepage": "https://github.com/jaden5165/wkk-admin",
   "dependencies": {
     "axios": "0.18.0",
     "element-ui": "2.4.6",
@@ -45,7 +43,7 @@
     "eventsource-polyfill": "0.9.6",
     "file-loader": "1.1.11",
     "friendly-errors-webpack-plugin": "1.7.0",
-    "html-webpack-plugin": "^4.0.0-alpha",
+    "html-webpack-plugin": "4.0.0-alpha",
     "mini-css-extract-plugin": "0.4.1",
     "node-notifier": "5.2.1",
     "node-sass": "^4.7.2",
@@ -63,7 +61,6 @@
     "svg-sprite-loader": "3.8.0",
     "uglifyjs-webpack-plugin": "1.2.7",
     "url-loader": "1.0.1",
-    "vue-gh-pages": "^1.18.2",
     "vue-loader": "15.3.0",
     "vue-style-loader": "4.1.2",
     "vue-template-compiler": "2.5.17",
