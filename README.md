@@ -74,3 +74,20 @@ Pictured:
 [MIT](https://github.com/PanJiaChen/vue-admin-template/blob/master/LICENSE) license.
 
 Copyright (c) 2017-present PanJiaChen
+
+
+Git merge branch to master excluding some files:
+git checkout master
+
+git merge --no-log --no-ff --no-commit <branch>
+
+git checkout master <files-you-don't-want-to-merge>
+
+
+git add <files-you-don't-want-to-merge>
+
+git commit -a
+
+~~~ Test / Build ~~~
+
+git push origin master 
